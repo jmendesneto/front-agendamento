@@ -33,17 +33,17 @@ export default function Aluno(){
   
         verifyForm(data)
 
-        console.log(data)
+       /// console.log(data)
       }
       
     return(
-    <div className=" flex flex-col py-1  px-10">
-     <div className=" flex-col  p-4 flex items-center justify-center " > 
-    <div className="bg-white py-4 px-10 sm:max-w-md w-full rounded-lg ">
+    <div className=" flex flex-col px-10">
+     <div className=" flex-col flex items-center justify-center " > 
+    <div className="bg-white  px-10 sm:max-w-md w-full rounded-lg ">
         <div className="sm:text-xl text-xl font-semibold text-center  font-abc text-letras2  mb-2">
         <p>Preencha seus dados corretamente</p>
         </div>
-        <form className="" onSubmit={handleSubmit(onSubmit)}>
+        <form className="  pb-8" onSubmit={handleSubmit(onSubmit)}>
             <div>
               <label className="font-abc font-bold uppercase text-letras2">Escola</label>
                  <input type="text" className="focus:outline-none border-b w-full  rounded-t-lg px-2 border-letras2   font-abc bg-card/[.25] h-10" value={escolaC}  {...register("escola")}/>
@@ -68,8 +68,8 @@ export default function Aluno(){
                 <p className="font-abc text-erro">{errors.CPF?.message}</p><br/>
             </div>
           
-            <div className="flex justify-center md: pb-14 ">
-                <button className=" rounded-full p-1 w-full sm:w-56   bg-green hover:bg-letras2 hover:text-2 cursor-pointer  text-white text-lg font-semibold " type="submit">
+            <div className="flex justify-center  pb-32 ">
+                <button className=" rounded-full p-1  w-full sm:w-56   bg-green hover:bg-letras2 hover:text-2 cursor-pointer  text-white text-lg font-semibold " type="submit">
                    Confirmar
                 </button>         
             </div>

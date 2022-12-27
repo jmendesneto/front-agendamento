@@ -11,7 +11,7 @@ export const EscolaContext = createContext ({});
   function EscolaProvider({children}){
     const navigate = useNavigate();
     const [escolas, setEscolas] = useState('');
-    const [Escola, setEscola] = useState('');
+    const [escola, setEscola] = useState('');
     const [escolaC, setEscolaC] = useState ('');
     const [aluno , setAluno] = useState('');
     const [alunoC , setAlunoC] = useState('');
@@ -35,10 +35,14 @@ const  pesquisaEscola = async (input, setInput) => {
      setEscolaInput(input)
        if(input === ''){
                toast.info("Preencha a escola!")
-                
+               
                             }  
+
+                            const escola = input.normalize('NFD').replace(/[\u0300-\u036f]/g,"")
+        
+                            
                      try{
-                           const response = await  api.post(`/api/belem/pesquisaescola/${input}`);
+                           const response = await  api.post(`/api/belem/pesquisaescola/${escola}`);
                          //// console.log(response.data[0].PRV_DESC);
                            setEscolas(response.data);
                        
@@ -50,18 +54,17 @@ const  pesquisaEscola = async (input, setInput) => {
         }
 
 const consultaEscola = async ( PRV_ID) =>{
-   console.log(PRV_ID)
+  /// console.log(PRV_ID)
     const escolaCons = PRV_ID
    //console.log(escolaCons)
-                try{
-                    const response = await  api.post(`/api/belem/verifyEscola/${escolaCons}`);
-                    setEscola(response.data);
-                    console.log(response.data);
-                 
-                    const loggedEscola = response.data[2];
-                    localStorage.setItem("escola", JSON.stringify(loggedEscola));
-                   setEscolaC(loggedEscola);
-                   setPrvid(response.data[1])
+       try{
+          const response = await  api.post(`/api/belem/verifyEscola/${escolaCons}`);
+          setEscola(response.data);
+                   /// console.log(escola);          
+           const loggedEscola = response.data[2];
+           localStorage.setItem("escola", JSON.stringify(loggedEscola));
+               setEscolaC(loggedEscola);
+               setPrvid(response.data[1])
                  if(! response.data[1] ){
                        toast.error("Escola não informada neste ano!")
                       }
@@ -76,10 +79,15 @@ const pesquisaAluno = async (inputAluno, setInputAluno) => {
         toast.info("Preencha a nome!")
 
       }  
+
+      const aluno = inputAluno.normalize('NFD').replace(/[\u0300-\u036f]/g,"")
       try{
-          const response = await  api.post(`/api/belem/pesquisaAluno/${inputAluno}/${prvid}`);
-          console.log(response.data);
+          const response = await  api.post(`/api/belem/pesquisaAluno/${aluno}/${prvid}`);
+        ///  console.log(response.data);
           setAluno(response.data);
+          if (response.data.length === 0){
+            toast.error("Aluno não encontrado")
+          }
           setInputAluno("");
               const loggedAluno = response.data[0].BEN_ALUNO;
               localStorage.setItem("aluno", JSON.stringify(loggedAluno));
@@ -92,18 +100,19 @@ const pesquisaAluno = async (inputAluno, setInputAluno) => {
       }catch{
         
       }
+          ///console.log("🚀 ~ file: escola.js:94 ~ pesquisaAluno ~ setAluno", aluno)
      
 }
 
 const  verifyForm =  async (data) => {
     const escolaDados = data.escola;
     const alunoDados = data.nome;
-    const maeDados = data.mae;
+    const maeDados = data.mae.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
     const CPFDados = data.CPF
     const datanascDados = data.datanasc.split('/').join('-');
-    console.log("teste dos dados",data.datanasc);
-    console.log('context escola',data.escola)
-    console.log('context',data)
+     // console.log("teste dos dados",data.datanasc);
+    //console.log('context escola',data.escola)
+    //console.log('context',data)
 
     if(data.escola  === ''){
         navigate('/pesquisaEscola');
@@ -114,9 +123,10 @@ const  verifyForm =  async (data) => {
         return
       }  
 
+
     try{
         const response = await  api.post(`/api/belem/verifyForm/${escolaDados}/${alunoDados}/${maeDados}/${CPFDados}/${datanascDados}`);
-     ///   console.log("teste de resposta",response.data.outBinds[0]);
+        ///console.log("teste de resposta",response.data.outBinds[0]);
           setForm(response.data.outBinds);
           setmaeAluno(maeDados);
           setCPFAluno(CPFDados);
@@ -137,11 +147,12 @@ const  AgendaAtendimento =  async (inputHora,maeAluno,nasc,CPFAluno,cdata1,aluno
  try{
    
   setAtt (inputHora)
-   const response = await api.post(`/api/belem/criarAgendamento/${inputHora}/${alunoAgend}/${maeAluno}/${nasc}/${CPFAluno}`);
-     console.log("teste de resposta",response.data);
+      const response = await api.post(`/api/belem/criarAgendamento/${inputHora}/${alunoAgend}/${maeAluno}/${nasc}/${CPFAluno}`);
+  ///   console.log("teste de resposta",response.data);
+      
       const localCpf = response.data[0]
            localStorage.setItem("Cpf",localCpf);
-            console.log("🚀 ~ file: escola.js ~ line 183 ~ AgendaAtendimento ~ setCpfAgendado", cpfAgendado)
+           /// console.log("🚀 ~ file: escola.js ~ line 183 ~ AgendaAtendimento ~ setCpfAgendado", cpfAgendado)
       const localAtt = inputHora;
           localStorage.setItem("Att", localAtt);
 
@@ -150,33 +161,17 @@ const  AgendaAtendimento =  async (inputHora,maeAluno,nasc,CPFAluno,cdata1,aluno
       
           const count1= localStorage.getItem("count");
 
-
-          console.log("🚀 count", count1)
-
-           toast.success("A gendamento realizado");
-
-        if (response.data[1] === 0) {
-          console.log('entrou no if consulta');
+   if (response.data[1] === 0) {
+   
+          // console.log('entrou no if consulta');
           const cpfAgendado = localStorage.getItem('Cpf');
           const att = localStorage.getItem('Att');
-
-        
           const response = await api.post(`/api/belem/confirmaPdf/${cpfAgendado}/${att}`);
-          console.log("🚀 ~ file: escola.js:175 ~ ConsultaAgendamento ~ resposta.data", response.data[0])
-      
           const respost = response.data;
-          console.log("🚀 ~ file: escola.js:199 ~ pesqProtocolo ~ respost", respost)
-          
-        //    setProtocolo(respost)
+         /// console.log("🚀 ~ file: escola.js:199 ~ pesqProtocolo ~ respost", respost)
+  
         //  console.log("🚀 ~ file: escola.js:180 ~ flushSync ~ setProtocolo", protocolo)
-          // GeraPdf(respost)
-       
-     
-       
- 
 
-        
-        
        
         //   console.log("🚀 ~ file: escola.js:180 ~ flushSync ~ setProtocolo", protocolo)
        
@@ -184,31 +179,22 @@ const  AgendaAtendimento =  async (inputHora,maeAluno,nasc,CPFAluno,cdata1,aluno
          
         //  console.log("🚀 ~ file: index.js:22 ~ ConsultaAgendamento ~ setProtocolo", protocolo)
         
-         console.log("Fez a pesquisa")
-   //// GeraPdf(protocolo)
+        // console.log("Fez a pesquisa")
+
  
    if(respost != null){
-
-    setAttnome(response.data[0])
-     console.log("if respost")
-    
-     /// alert(attnome)
+   ///  console.log("if respost")
      GeraPdf(respost)
-    }
-
-      
+     navigate("/")
+     toast.success("A gendamento realizado com sucesso!");
+    }else{
+        toast.error(response.data[2])
+        navigate("/")
       }
-  
-     
+    }
       }catch{
       
     }
-
-
- 
-  
-  
-
  }
    
   
@@ -226,7 +212,7 @@ const  agendarData = async (ATT_ID,cdata1) =>{
 
     return(
         <EscolaContext.Provider value={{aluno, nasc,maeAluno,CPFAluno,pesquisaEscola, pesquisaAluno, escolas, setEscolas, escolaC, setEscola, setEscolaC, setAlunoC, alunoC , 
-        verifyForm, consultaEscola,AgendaAtendimento, agendarData, setAtt,att,escolaInput,setAtt,att}}>
+        verifyForm, consultaEscola,AgendaAtendimento, agendarData, setAtt,att,escolaInput,setAtt,att,setEscola, escola}}>
        
             {children}
         </EscolaContext.Provider>

@@ -10,7 +10,7 @@ function App() {
     <Nav/>
     <ToastContainer autoClose={4000}/>
     <Routes/>
-     <Footer /> 
+    <Footer/>
    </div>
   );
 }

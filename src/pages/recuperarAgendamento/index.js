@@ -3,8 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import api from "../../service/api";
-import RecuperaPdf from "../../pdf/recuperarProtocolo";
-
+import RecuperaPdf from "../../pdf/recProtocolo";
+import {toast} from 'react-toastify';
 
 
 export  default function Recuperar () {
@@ -20,6 +20,9 @@ export  default function Recuperar () {
           const response = await api.post(`api/belem/recuperaAgendamento/${inputCPF}`);
          console.log(response.data)
          /// setRespost(response[0].data);
+         if (response.data.length === 0){
+            toast.error("CPF não foi encontrado")
+          }
          const recupera = response.data;
                    RecuperaPdf(recupera)
           console.log("🚀 ~ file: index.js:25 ~ recuperarProtocolo ~ setProtocoloRec", recupera)
@@ -38,7 +41,7 @@ export  default function Recuperar () {
               <label className="font-abc font-bold uppercase text-xl text-letras2 m-5 ">CPF:</label><br/><br/>
                  <InputMask type="text" mask="999.999.999-99"  className="focus:outline-none border-b w-[15rem]  rounded-t-lg px-2 border-letras2 font-abc bg-card/[.25] h-10" value={inputCPF}   onChange={ (e) => setInputCPF(e.target.value)} />
             </div>
-        <div className=" flex flex-wrap justify-center">
+        <div className=" flex flex-wrap justify-center   pb-36">
             <div className="flex  justify-center pr-2">
                <button className=" rounded-full px-1  w-28 h-8 bg-green hover:bg-letras2 hover:text-2 cursor-pointer  text-white text-lg font-semibold "  onClick={ () => recuperarProtocolo()}>
                    Recuperar

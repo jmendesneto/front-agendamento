@@ -1,6 +1,4 @@
 import React, { useContext,useState} from 'react';
-import {EscolaContext} from '../contexts/escola';
-import api from '../service/api';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 import pdfMaker from 'pdfmake/build/pdfmake';
 
@@ -20,8 +18,8 @@ const dataAtual = dia + '/' + mes + '/' + ano;
 
 pdfMaker.vfs =  pdfFonts.pdfMake.vfs;
 
-console.log("Gerar pdf 1", recupera);
- alert("Gerar pdf 2", JSON.stringify(recupera[0].ATT_CPF));
+//console.log("Gerar pdf 1", recupera);
+//  alert("Gerar pdf 2", JSON.stringify(recupera));
 
 
 const reportTitle = [

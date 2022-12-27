@@ -15,13 +15,16 @@ export default function Home(){
      const navigate = useNavigate();
 
 
-async function handleIniciar(data1) {
+ async function handleIniciar(data1) {
 
   try{
     const response = await api.post(`api/belem`);
-    console.log(response.data)
+  ///  console.log(response.data)
     setIniciar(response.data)
-   
+    async function InativaVagas() {
+      const resposta = await api.post(`api/belem/inativaVagas`);
+    }
+    InativaVagas();
         if(response.data.status === true){
            navigate("/pesquisaEscola")   
          } else{
@@ -33,19 +36,26 @@ async function handleIniciar(data1) {
   }
 
      return (
-<div className='flex flex-col  md:py-4  px-10'>
+<div className='flex flex-col  md:py-4  '>
 
-       <div className='flex justify-center  pt-3'> 
-          <h1 className='text-2xl md:text-xl md-10 font-medium  max-w-3xl font-loto text-center text-outra py-20 md:py-3 '>Atendimento exclusivo para os alunos de Belém </h1>
+       <div className='flex justify-center pb-5'> 
+          <h1 className='text-2xl md:text-xl md-4 font-medium  max-w-3xl font-loto text-center text-outra py-20 md:py-3 '>Atendimento exclusivo para os alunos de Belém </h1>
        </div>
+
  
-  <div className="flex flex-wrap">
+  <div className="flex flex-wrap  pb-28  px-16 pr-36 ">
 
 
-        <div className="flex flex-wrap  justify-center items-center mt-0  ">
           
-	           <div className="hover:bg-card3   w-48 h-40  rounded-lg bg-base-Card m-5" onClick={handleIniciar}>
-               <img src={Calendar} className="h-32 mx-9"/>
+       <div className="flex flex-wrap  justify-center items-center  ">
+            <img src={Cartao} className="mx-1  w-0 md:w-80  mb-0 md:mb-20"/>
+
+       </div>
+         
+        <div className="flex flex-wrap  justify-center items-center   mt-20 ">
+          
+	           <div className="hover:bg-card3   w-48 h-40  rounded-lg bg-base-Card  m-8 cursor-pointer" onClick={handleIniciar}>
+               <img src={Calendar} className="h-32  mx-9"/>
                <h1 className='text-center text-letras2 text-xl font-abc font-bold'>Iniciar Agendamento</h1>
              </div>
              
@@ -59,7 +69,7 @@ async function handleIniciar(data1) {
 
              <div className="hover:bg-card3 w-48 h-40  rounded-lg bg-base-Card m-5" >
                 <Link to={'/recuperar'}>
-                 <img src={Recovery} className="h-24   mx-11"/>
+                 <img src={Recovery} className=" flex  flex-wrap h-24   mx-11 justify-center  items-center"/>
                  <h1 className='text-center text-letras2  text-xl font-abc font-bold '>Recuperar Agendamento</h1>
                  </Link>
              </div>

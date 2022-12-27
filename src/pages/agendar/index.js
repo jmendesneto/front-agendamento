@@ -5,7 +5,7 @@ import {EscolaContext} from '../../contexts/escola';
 import PdfPrinter from 'pdfmake';
 import GeraPdf from '../../pdf/protocolo'
 import { toast } from 'react-toastify';
-
+import Footer from '../../components/Footer';
 
 export default function Agendar(){
     const {alunoC,nasc,maeAluno,CPFAluno,AgendaAtendimento,aluno,agendarData,cpfAgendado,setCpfAgendado,setAtt,att,confirmaPdf} = useContext(EscolaContext);
@@ -28,6 +28,7 @@ useEffect (() =>{
 },[])
 
  const cdata1 = selectedDias.split('/').join('-');//data ajustada pra passar no axios
+
 
 
 useEffect (() =>{
@@ -62,7 +63,7 @@ function handleHora (ATT_ID,HORA){
   setInputHora(horario)
  
 }
-  console.log("🚀 ~ file: index.js:65 ~ handleHora ~ setInputHora", inputHora)
+///  console.log("🚀 ~ file: index.js:65 ~ handleHora ~ setInputHora", inputHora)
 
 
 
@@ -115,13 +116,16 @@ function handleHora (ATT_ID,HORA){
                   )}
                 )}
            </div>
-          <div className='flex justify-center   pb-16 '>
+          <div className='flex justify-center  pb-36'>
           <button className="  rounded-full p-1   w-full sm:w-56  bg-green hover:bg-letras2 hover:text-2 cursor-pointer  text-white text-lg font-semibold " onClick={ () => agendarAluno()}>
                  AGENDAR
                 </button>   
           </div>
+       
     </div>
+
   </div>
+ 
 </div>
     )}
 
