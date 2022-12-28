@@ -35,6 +35,10 @@ export default function Home(){
         }
   }
 
+  function teste(){
+    navigate('/pesquisaEscola')
+  }
+
      return (
 <div className='flex flex-col  md:py-4  '>
 
@@ -44,8 +48,6 @@ export default function Home(){
 
  
   <div className="flex flex-wrap   px-24">
-
-
           
        <div className="flex flex-wrap  justify-center items-center  ">
             <img src={Cartao} className="mx-1  w-0 md:w-80  mb-0 md:mb-20"/>

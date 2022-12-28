@@ -211,10 +211,14 @@ const  agendarData = async (ATT_ID,cdata1) =>{
   ///setCpfAgendado, cpfAgendado,
 }
 
+  function duvida (){
+    navigate('/ajuda')
+  }
+
 
     return(
         <EscolaContext.Provider value={{aluno, nasc,maeAluno,CPFAluno,pesquisaEscola, pesquisaAluno, escolas, setEscolas, escolaC, setEscola, setEscolaC, setAlunoC, alunoC , 
-        verifyForm, consultaEscola,AgendaAtendimento, agendarData, setAtt,att,escolaInput,setAtt,att,setEscola, escola}}>
+        verifyForm, consultaEscola,AgendaAtendimento, agendarData, setAtt,att,escolaInput,setAtt,att,setEscola, escola, duvida}}>
        
             {children}
         </EscolaContext.Provider>

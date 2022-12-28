@@ -1,14 +1,16 @@
 import React from "react";
-import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Alert from '../../img/alert.png'
 
 export default function NotFould(){
   
     const navigate = useNavigate();
+
+
     function home (){
          navigate('/')
     }
+
     return(
         <div className="flex flex-col   pt-28 pb-9 justify-center items-center text-center md:justify-center">
              
