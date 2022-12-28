@@ -38,12 +38,12 @@ export default function Home(){
      return (
 <div className='flex flex-col  md:py-4  '>
 
-       <div className='flex justify-center pb-5'> 
+       <div className='flex justify-center pb-11'> 
           <h1 className='text-2xl md:text-xl md-4 font-medium  max-w-3xl font-loto text-center text-outra py-20 md:py-3 '>Atendimento exclusivo para os alunos de Belém </h1>
        </div>
 
  
-  <div className="flex flex-wrap  pb-28  px-16 pr-36 ">
+  <div className="flex flex-wrap   px-24">
 
 
           

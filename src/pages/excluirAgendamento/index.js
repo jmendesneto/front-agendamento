@@ -28,16 +28,16 @@ export default function Excluir (){
     }
 
     return(
-<div className="flex flex-col  md:px-10">
+<div className="flex flex-col  md:px-10 pb-5">
           
-        <div className="flex justify-center text-center md: py-5 ">
+        <div className="flex justify-center text-center md: py-5  pb-10">
             <h1 className="font-loto font-bold  text-letras2   py-4 text-xl">Excluir Agendamento</h1>
         </div>
         <div className="flex justify-center items-center  mx-20 ">
           <label className="font-abc font-bold uppercase text-xl text-letras2 m-5 ">CPF:</label><br/><br/>
           <InputMask type="text" mask="999.999.999-99"  className="focus:outline-none border-b w-[15rem]  rounded-t-lg px-2 border-letras2 font-abc bg-card/[.25] h-10"  value={inputCpf} onChange={(e) => setInputCpf(e.target.value)}  />
         </div>
-    <div className=" flex flex-wrap justify-center  pb">
+    <div className=" flex flex-wrap justify-center pb-48">
         <div className="flex  justify-center pr-2">
            <button className=" rounded-full px-1  w-28 h-8 bg-green hover:bg-letras2 hover:text-2 cursor-pointer  text-white text-lg font-semibold "  onClick={excluirAgend} >
                Excluir

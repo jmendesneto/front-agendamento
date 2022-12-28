@@ -68,7 +68,7 @@ export default function Aluno(){
                 <p className="font-abc text-erro">{errors.CPF?.message}</p><br/>
             </div>
           
-            <div className="flex justify-center  pb-32 ">
+            <div className="flex justify-center  ">
                 <button className=" rounded-full p-1  w-full sm:w-56   bg-green hover:bg-letras2 hover:text-2 cursor-pointer  text-white text-lg font-semibold " type="submit">
                    Confirmar
                 </button>         

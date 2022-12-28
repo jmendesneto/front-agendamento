@@ -23,14 +23,14 @@ export default function Navbar() {
   </div>
   <div className={"w-full block flex-grow lg:flex lg:items-center lg:w-auto pr-28 text-letras font-bold"+  (navbarOpen ? " flex" : " hidden")}>
     <div className="text-sm lg:flex-grow justify-center text-end">
-      <a href="/contato"  className="block  lg:inline-block lg:mt-0 hover:text-hoverspt  font-abc text-xl px-8 cursor-pointer">
-        Nossos Contatos
-      </a>
+        <a href="/contato"  className="block  lg:inline-block lg:mt-0 hover:text-hoverspt  font-abc text-xl px-8 cursor-pointer">
+          Nossos Contatos
+        </a>
       {/* <a  className="block  lg:inline-block lg:mt-0 hover:text-hoverspt text-sm cursor-pointer px-8  ">
        |
       </a> */}
       <a href='/ajuda' className="block lg:inline-block lg:mt-0 hover:text-hoverspt font-abc text-xl  cursor-pointer  px-8">
-        Ajuda
+      Dúvidas
       </a>
     </div>
   </div>

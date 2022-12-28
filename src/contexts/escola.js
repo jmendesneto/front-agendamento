@@ -116,10 +116,12 @@ const  verifyForm =  async (data) => {
 
     if(data.escola  === ''){
         navigate('/pesquisaEscola');
+        toast.error("Campo aluno vazio")
         return
       }  
       if(data.aluno  === ''){
         navigate('/pesquisaEscola');
+        toast.error("Campo aluno vazio")
         return
       }  
 

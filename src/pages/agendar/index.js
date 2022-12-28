@@ -116,7 +116,7 @@ function handleHora (ATT_ID,HORA){
                   )}
                 )}
            </div>
-          <div className='flex justify-center  pb-36'>
+          <div className='flex justify-center'>
           <button className="  rounded-full p-1   w-full sm:w-56  bg-green hover:bg-letras2 hover:text-2 cursor-pointer  text-white text-lg font-semibold " onClick={ () => agendarAluno()}>
                  AGENDAR
                 </button>   

@@ -35,12 +35,12 @@ export default function Pesquisar (){
     return(
 
 <div className=" flex flex-col justify-center md:py-1  px-4 ">
-  <div className=' pb-60'>
-      <div className=' flex justify-center text-center  pt-3'>
+  <div className=' pb-10 lg:pb-56'>
+      <div className=' flex justify-center text-center  pt-8'>
         <h1 className='font-loto font-bold  text-letras2  py-3 text-xl'>Encontre sua instituição de ensino</h1>
       </div>
 
-     <div className="flex justify-evenly items-center pt-4 ">
+     <div className="flex justify-evenly items-center pt-5 ">
          <div className=" flex items-center">
             <input  className="flex  relative h-10 w-92  md:w-[40rem]  bg-slate-300 bg-input rounded-xl  px-3 py-1 text-lg place-content-center uppercase font-abc text-center focus:outline-none "
             type="text"
@@ -98,7 +98,7 @@ export default function Pesquisar (){
      </div>
      )}
 </div>
-  
+{/* <Footer/> */}
 </div>    
 )};
 

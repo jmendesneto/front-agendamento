@@ -10,6 +10,7 @@ import Recuperar from '../pages/recuperarAgendamento';
 import Contato from '../pages/contatos';
 import Ajuda from '../pages/ajuda';
 import ConfAgendamento from '../pages/confAgendamento';
+import NotFould from '../pages/notFould';
 
 export default function RouteApp (){
     return(
@@ -24,8 +25,10 @@ export default function RouteApp (){
                 <Route path='/excluir' element={<Excluir/>}/>
                 <Route path='/recuperar' element={<Recuperar/>}/>
                 <Route path='/contato' element={<Contato/>}/>
-                <Route path='/ajuda' element={<Ajuda/>}/>
+                <Route path="/ajuda"   element={<Ajuda/>}/>
                 <Route path='/confAgendamento' element={<ConfAgendamento/>}/>
+                <Route path='/404' element={<NotFould/>}/>
+                <Route path='*' element={<Navigate to="404"/>}/>
                 </Routes>
                 </EscolaProvider>
             </Router>
