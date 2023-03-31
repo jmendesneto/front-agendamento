@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9ddfc7e5.css",
+    "main.js": "/static/js/main.4aa14da7.js",
+    "static/media/mercado.jpg": "/static/media/mercado.71729d7805e22dc1d4eb.jpg",
+    "static/media/cartao.png": "/static/media/cartao.a64696b323ad50bf4a25.png",
+    "static/media/call-center.jpg": "/static/media/call-center.f9e93f80aa23d631fa51.jpg",
+    "static/media/LogoPF.png": "/static/media/LogoPF.cbe4f68f9add743b2969.png",
+    "static/media/calendarioH.png": "/static/media/calendarioH.b62d7c8da697c29037f4.png",
+    "static/media/em.png": "/static/media/em.ce5c76d93432b5d3f30f.png",
+    "static/media/1.png": "/static/media/1.f5bb220b7d29ec3761f7.png",
+    "static/media/wave16.svg": "/static/media/wave16.ea4068653620687e3e435af9a0d84688.svg",
+    "index.html": "/index.html",
+    "static/media/file-x-2.svg": "/static/media/file-x-2.aa199aa82fb179e0fb56717075459f61.svg",
+    "static/media/refresh-ccw.svg": "/static/media/refresh-ccw.854040afda58cb8f1e13430b2b54f55c.svg",
+    "static/media/calendar.svg": "/static/media/calendar.e08ab4cd149c5ce010b23d9645d9f02e.svg",
+    "static/media/index.cjs": "/static/media/index.cd351d7c31d0d3fccf96.cjs",
+    "main.9ddfc7e5.css.map": "/static/css/main.9ddfc7e5.css.map",
+    "main.4aa14da7.js.map": "/static/js/main.4aa14da7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ddfc7e5.css",
+    "static/js/main.4aa14da7.js"
+  ]
+}

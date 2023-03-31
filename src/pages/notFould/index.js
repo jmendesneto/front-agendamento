@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Alert from '../../img/alert.png'
 
+
 export default function NotFould(){
   
     const navigate = useNavigate();

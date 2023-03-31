@@ -45,9 +45,10 @@ export default function Ajuda (){
         Critérios para o atendimento - 1ª Via Passe Facil
         </AccordionHeader>
         <AccordionBody>
-        Alunos regularmente matriculados e informados pela Instituição de Ensino credenciadas no sistema Passe Fácil, que estejam frequentando o ano letivo em curso;
-         Alunos que nunca tiveram cartão Passe Fácil Estudantil;
-         Alunos que tiveram seu cartão cancelado em anos anteriores.
+         *Alunos regularmente matriculados e informados pela Instituição de Ensino credenciadas no sistema Passe Fácil, que estejam frequentando o ano letivo em curso;<br/>
+         *Alunos que nunca tiveram cartão Passe Fácil Estudantil;<br/>
+         *Alunos que tiveram seu cartão cancelado em anos anteriores.
+         
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
@@ -55,9 +56,11 @@ export default function Ajuda (){
         Documentos necessários para a solicitação
         </AccordionHeader>
         <AccordionBody>
-        01 (uma) Foto 3x4, colorida, sem marcas e recente (até 02 anos de emissão);
-        Original e cópia legível do RG (Certidão de Nascimento apenas em caso de menores de idade);
-        Cópia do comprovante de residência com CEP de seu município. (Água, Luz, Telefone, Boletos de Loja, Cartão de Credito, Carnês Escolares, Cópia do Contrato de Locação de Imóvel, Boletos Bancário NO NOME DO USUÁRIO ou com SOBRE NOMES DE FAMILIARES)
+            *01 (uma) Foto 3x4, colorida, sem marcas e recente (até 02 anos de emissão);<br/>
+            *Original e cópia legível do RG (Certidão de Nascimento apenas em caso de menores de idade);<br/>
+            *Cópia do comprovante de residência com CEP de seu município. (Água, Luz, Telefone, Boletos de Loja, Cartão de Credito, Carnês Escolares, Cópia do Contrato de Locação de Imóvel, Boletos Bancário NO NOME DO USUÁRIO ou com SOBRE NOMES DE FAMILIARES)<br/>
+            *Declaração original da Instituição de Ensino que comprove a matrícula no ano letivo de 2023.
+         
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>

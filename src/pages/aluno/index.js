@@ -37,13 +37,13 @@ export default function Aluno(){
       }
       
     return(
-    <div className=" flex flex-col px-10">
-     <div className=" flex-col flex items-center justify-center " > 
+    <div className=" flex  flex-col px-10 h-screen  ls:h-auto ">
+     <div className=" flex-col  flex items-center justify-center " > 
     <div className="bg-white  px-10 sm:max-w-md w-full rounded-lg ">
-        <div className="sm:text-xl text-xl font-semibold text-center  font-abc text-letras2  mb-2">
+        <div className="sm:text-xl text-xl font-semibold text-center  font-abc text-letras2  ">
         <p>Preencha seus dados corretamente</p>
         </div>
-        <form className="  pb-8" onSubmit={handleSubmit(onSubmit)}>
+        <form className=" " onSubmit={handleSubmit(onSubmit)}>
             <div>
               <label className="font-abc font-bold uppercase text-letras2">Escola</label>
                  <input type="text" className="focus:outline-none border-b w-full  rounded-t-lg px-2 border-letras2   font-abc bg-card/[.25] h-10" value={escolaC}  {...register("escola")}/>

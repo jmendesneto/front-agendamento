@@ -43,7 +43,7 @@ const details = [
                   
                },
 
-    {text:"CADASTRO ALUNO 2022 - BELÉM", fontSize:20, bold:true , alignment: 'center', margin:[0,10,0,10], style: 'header'},///left, top, right, bottom
+    {text:"CADASTRO ALUNO 2023 - BELÉM", fontSize:20, bold:true , alignment: 'center', margin:[0,10,0,10], style: 'header'},///left, top, right, bottom
     {text:"Confirmação de Agendamento" , fontSize:15, bold:true , alignment: 'center', margin:[0,5,0,10], style: 'header'},
     
     {
@@ -109,7 +109,8 @@ const details = [
                         ul: [
                             '01 (uma) Foto 3x4, colorida, sem marcas e recente (até 02 anos de emissão);',
                             'Original e cópia legível do RG (Certidão de Nascimento apenas em caso de menores de idade);',
-                            'Cópia do comprovante de residência com CEP de seu município. (Água, Luz, Telefone, Boletos de Loja, Cartão de Credito, Carnês Escolares, Cópia do Contrato de Locação de Imóvel, Boletos Bancário NO NOME DO USUÁRIO ou com SOBRE NOMES DE FAMILIARES.'
+                            'Cópia do comprovante de residência com CEP de seu município. (Água, Luz, Telefone, Boletos de Loja, Cartão de Credito, Carnês Escolares, Cópia do Contrato de Locação de Imóvel, Boletos Bancário NO NOME DO USUÁRIO ou com SOBRE NOMES DE FAMILIARES.',
+                            // 'Declaração original da Instituição de Ensino que comprove a matrícula no ano letivo de 2023.',
                         ]
                     },
                     
@@ -118,7 +119,7 @@ const details = [
                                    width: 50,
                                    height: 20,
                                    alignment:'center',
-                                  margin:[0,95,0,0]
+                                  margin:[0,80,0,0]
                                   
                                },
 
@@ -163,7 +164,7 @@ pdfMaker.createPdf(docDefinitios).download("Protocolo - "+ respost[0].ATT_NOME +
 
 }
 
-export default GeraPdf;
+
 
 
     // import React, { useContext,useState} from 'react';
@@ -337,4 +338,4 @@ export default GeraPdf;
 
 // }
 
-// export default GeraPdf;
+ export default GeraPdf;

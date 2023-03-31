@@ -8,9 +8,18 @@ import Footer from '../src/components/Footer/index'
 function App() {
   return (
    <div >
-  
-    
-    <ToastContainer autoClose={4000}/>
+
+  <ToastContainer
+     position="top-right"
+     autoClose={5000}
+     hideProgressBar={false}
+     newestOnTop={false}
+     closeOnClick
+     rtl={false}
+     pauseOnFocusLoss
+     draggable
+     pauseOnHover
+     theme="colored"/>
    
     <Routes/>
     

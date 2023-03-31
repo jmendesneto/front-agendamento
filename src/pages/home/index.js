@@ -40,21 +40,21 @@ export default function Home(){
   }
 
      return (
-<div className='flex flex-col  md:py-4  '>
+<div className='flex  h-screen flex-col mt-auto   pt-20  '>
 
-       <div className='flex justify-center pb-11'> 
+       <div className=' mt-auto flex justify-center pb-11'> 
           <h1 className='text-2xl md:text-xl md-4 font-medium  max-w-3xl font-loto text-center text-outra py-20 md:py-3 '>Atendimento exclusivo para os alunos de Belém </h1>
        </div>
 
  
-  <div className="flex flex-wrap   px-24">
+  <div className="mb-auto flex  flex-wrap  justify-center items-center px-24">
           
-       <div className="flex flex-wrap  justify-center items-center  ">
+       <div className="mb-auto flex flex-wrap  justify-center items-center  ">
             <img src={Cartao} className="mx-1  w-0 md:w-80  mb-0 md:mb-20"/>
 
        </div>
          
-        <div className="flex flex-wrap  justify-center items-center   mt-20 ">
+        <div className=" mb-auto flex flex-wrap  justify-center items-center   mt-20 ">
           
 	           <div className="hover:bg-card3   w-48 h-40  rounded-lg bg-base-Card  m-8 cursor-pointer" onClick={handleIniciar}>
                <img src={Calendar} className="h-32  mx-9"/>

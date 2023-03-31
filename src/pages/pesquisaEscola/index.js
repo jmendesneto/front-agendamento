@@ -34,8 +34,8 @@ export default function Pesquisar (){
 
     return(
 
-<div className=" flex flex-col justify-center md:py-1  px-4 ">
-  <div className=' pb-10 lg:pb-56'>
+<div className=" flex flex-col mb-auto  justify-center md:py-10  px-4 pt-28 ">
+  <div className='  md:h-screen  '>
       <div className=' flex justify-center text-center  pt-8'>
         <h1 className='font-loto font-bold  text-letras2  py-3 text-xl'>Encontre sua instituição de ensino</h1>
       </div>
@@ -85,7 +85,7 @@ export default function Pesquisar (){
   } 
 
  {escolaC && (
-     <div className=' flex flex-row justify-center  '>
+     <div className=' flex flex-row mb-auto justify-center  '>
         <input
            className='flex rounded-xl m-1  w-64 md:w-[33rem] ponteiro-eventos-auto bg-Base1   h-8 text-center uppercase place-content-center font-abc focus:outline-none cursor-text'
             type='text'

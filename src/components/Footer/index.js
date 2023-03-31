@@ -8,19 +8,38 @@ export default function Footer(){
     return(
 
          
-         <footer className=" inset-x-0 left-0 bottom-0 w-0 md:w-full sm:w-full lg:w-full  ">
+         <footer className="  relative   inset-x-0 bottom-0 ">
             
-            <div className="pt-4  md:pt-9">
-               <div className="flex flex-wrap sticky justify-end text-end  z-50   pr-10 ">
+            <div className="   w-full absolute  ">
+               <div className=" flex  flex-wrap justify-end text-end  z-50   pr-10 ">
                  <img src={Logo} className="h-3  md:h-11 " />
                  </div>
-                  <ReactSVG src = {Wave16} className="flex-initial sticky invisible  lg:visible  w-0 md:w-full "/>        
-                  {/* <ReactSVG src = {Wave16} className="sticky w-0 md:w-full "/>         */}
+                  <ReactSVG src = {Wave16} className=" inset-x-0 bottom-0  "/>        
+                  {/*  <ReactSVG src = {Wave16} className="sticky w-0 md:w-full "/>         */}
             </div>
                
                             
             
          </footer>
+
+
+
+
+
+
+         // <footer className=" inset-x-0 left-0 bottom-0 w-0 md:w-full sm:w-full lg:w-full  ">
+            
+         //    <div className="pt-4  md:pt-9">
+         //       <div className="flex flex-wrap sticky justify-end text-end  z-50   pr-10 ">
+         //         <img src={Logo} className="h-3  md:h-11 " />
+         //         </div>
+         //          <ReactSVG src = {Wave16} className="flex-initial sticky invisible  lg:visible  w-0 md:w-full "/>        
+         //          {/* <ReactSVG src = {Wave16} className="sticky w-0 md:w-full "/>         */}
+         //    </div>
+               
+                            
+            
+         // </footer>
        
 
       // <div className=" static ">         

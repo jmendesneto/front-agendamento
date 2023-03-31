@@ -2,7 +2,7 @@ import React from "react";
 import { FaSearch} from 'react-icons/fa';
 import Call from '../../img/call-center.jpg';
 import Mercado from '../../img/mercado.jpg'
-import GoogleMapReact from 'google-map-react';
+import Email from '../../img/em.png'
 
 export default function Contato( ){
   
@@ -13,6 +13,19 @@ export default function Contato( ){
         </div>
 
         <div className="flex flex-wrap justify-center items-center  py-20">
+
+        <div className=" px-8">   
+            <div className="max-w-sm rounded overflow-hidden shadow-lg   bg-card3">
+  <img className=" h-40 w-full" src={Email} />
+  <div className="px-6 py-4">
+    <div className="text-xl mb-2 text-center text-letras2 font-abc ">Duvidas sobre Atendimento Estudante</div>
+    <p className="text-gray-700  text-letras2 text-center">
+    Ao enviar sua dúvida para o email <b>faleconosco@passefacil.com.br</b> especifique as seguintes informações: Nome, Nome da Mãe e data de Nascimento (conforme RG ou Certidão de Nascimento).
+    </p>
+  </div>
+  
+</div>
+</div>
           <div className=" px-8">   
             <div className="max-w-sm rounded overflow-hidden shadow-lg   bg-card3">
   <img className=" h-36 w-full" src={Call} />
@@ -25,38 +38,25 @@ export default function Contato( ){
     Informações: (91) 3201-0101
     </p>
   </div>
-  {/* <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div> */}
+  
 </div>
 </div>
 
 <div className=" px-8">   
-            <div className="max-w-sm rounded overflow-hidden shadow-lg   bg-card3">
-  <img className=" h-40 w-full" src={Mercado} />
-  <div className="px-6 py-4">
-    <div className="text-xl mb-2 text-center text-letras2 font-abc ">Posto de atendimento autorizado Belém</div>
-    <p className="text-gray-700  text-letras2 text-center">
-    Endereço: Praça Floriano Peixoto, S/N São Braz.
-    Horário de Atendimento: Segunda a Sexta, 8h às 16h <br/>
-   
-
-Informações: (91) 3201-0100
-    </p>
-   
-  </div>
-  {/* <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div> */}
-</div>
-</div>
+   <div className="max-w-sm rounded overflow-hidden shadow-lg   bg-card3">
+         <img className=" h-40 w-full" src={Mercado} />
+     <div className="px-6 py-4">
+        <div className="text-xl mb-2 text-center text-letras2 font-abc ">Posto de atendimento autorizado Belém</div>
+         <p className="text-gray-700  text-letras2 text-center">
+         Endereço: Praça Floriano Peixoto, S/N São Braz.
+         Horário de Atendimento: Segunda a Sexta, 8h às 16h <br/>
+         Informações: (91) 3201-0100
+         </p>
+     </div>
+   </div>
 </div>
 
-         
+</div>   
       </div>
 
 
