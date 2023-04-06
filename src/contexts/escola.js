@@ -57,7 +57,7 @@ const escolaCons = PRV_ID
                   setEscolaC(loggedEscola);
                console.log("🚀 ~ file: escola.js:63 ~ consultaEscola ~ EscolaC", response.data)
                   setPrvid(response.data[1])
-                    if(! response.data[1] ){
+                    if(!response.data[1] ){
                     ////   console.log("🚀 ~ file: escola.js:60 ~ consultaEscola ~  response.data[1]",  response.data[1])
                        toast.error("Escola não informada neste ano!")
                       }
